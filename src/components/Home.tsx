@@ -3,6 +3,10 @@ import CheckBox from './checkbox'
 
 export default function Home() {
     return (
-        <><div>Home</div><CheckBox></CheckBox></>
+        <>
+        <h1 className='h1-text'>Home</h1>
+        
+        <CheckBox></CheckBox>
+        </>
     )
 }
