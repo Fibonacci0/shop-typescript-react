@@ -1,0 +1,88 @@
+/* Admin.css */
+.admin-container {
+    padding: 24px;
+    background-color: #f5f5f5;
+    height: 100%;
+  }
+  
+  .admin-title {
+    text-align: center;
+    color: #1890ff;
+    font-weight: bold;
+  }
+  
+  .admin-subtitle {
+    display: block;
+    text-align: center;
+    color: #6c6c6c;
+    margin-bottom: 40px;
+  }
+  
+  .admin-options-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  
+  .admin-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .admin-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .admin-icon {
+    font-size: 40px;
+    color: #1890ff;
+    margin-bottom: 20px;
+  }
+  
+  .admin-button {
+    background-color: #1890ff;
+    color: white;
+    border: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .admin-button:hover {
+    background-color: #40a9ff;
+  }
+  
+  .admin-button:focus {
+    background-color: #40a9ff;
+    outline: none;
+  }
+  
+  .admin-card .ant-typography {
+    color: #595959;
+  }
+  
+  .admin-card .ant-btn {
+    margin-top: 15px;
+    padding: 0 20px;
+  }
+  
+  .admin-card .ant-statistic {
+    margin-top: 10px;
+  }
+  
+  .admin-card .ant-statistic-title {
+    font-size: 16px;
+    color: #999;
+  }
+  
+  .admin-card .ant-statistic-value {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .admin-card .ant-statistic-content {
+    color: #1890ff;
+  }
+  

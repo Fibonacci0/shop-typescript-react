@@ -5,9 +5,7 @@ import {
     MenuFoldOutlined,
     MenuUnfoldOutlined,
     ProductFilled,
-    UploadOutlined,
-    UserOutlined,
-    VideoCameraOutlined,
+    CloseCircleFilled,
 } from '@ant-design/icons';
 import { Button, Layout, Menu, theme } from 'antd';
 import { Link, Outlet } from 'react-router-dom';
@@ -32,7 +30,7 @@ const AppLayout: React.FC = () => {
                         {
                             key: '1',
                             icon: <HomeFilled />,
-                            label: <Link to="/">Home</Link>,
+                            label: <Link to="/admin">Home</Link>,
                         },
                         {
                             key: '2',
@@ -42,7 +40,12 @@ const AppLayout: React.FC = () => {
                         {
                             key: '3',
                             icon: <InfoCircleFilled />,
-                            label: <Link to="/about">About</Link>,
+                            label: <Link to="/info">About</Link>,
+                        },
+                        {
+                            key: '4',
+                            icon: <CloseCircleFilled style={{ marginRight: 8, color: '#f63e47' }} />,
+                            label: <Link to="/">Exit</Link>,
                         },
                     ]}
                 />

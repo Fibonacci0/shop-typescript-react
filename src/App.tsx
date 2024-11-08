@@ -5,6 +5,8 @@ import { Route, Routes } from 'react-router-dom'
 import Home from './components/Home'
 import Products from './components/Products'
 import InfoTab from './components/InfoTab'
+import AdminPage from './components/Admin'
+import ProductInfo from './components/ProductInfo'
 
 
 function App() {
@@ -12,13 +14,18 @@ function App() {
 
   return (
     <>
-      <Routes>
-        <Route path='/' element={<AppLayout />}>
-          <Route index element={<Home />} />
-          <Route path='/products' element={<Products />} />
-          <Route path='*' element={<InfoTab />} />
-        </Route>
-      </Routes>
+            <Routes>
+                {/* Routes without layout */}
+                <Route path="/" element={<Home />} />
+                
+                {/* Routes with layout */}
+                <Route element={<AppLayout />}>
+                    <Route path="/products" element={<Products />} />
+                    <Route path="/info" element={<InfoTab />} />
+                    <Route path='/details/:id' element={<ProductInfo />} />
+                    { <Route path="/admin" element={<AdminPage />} /> }
+                </Route>
+            </Routes>
     </>
   )
 }
