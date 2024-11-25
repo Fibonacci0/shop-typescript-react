@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Button, message, Popconfirm, Space, Table, TableProps, Tag } from 'antd';
-import { DeleteOutlined, InfoCircleOutlined } from '@ant-design/icons';
+import { DeleteOutlined, InfoCircleOutlined,EditFilled} from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 import { ProductModel } from '../models/products.ts';
 
@@ -23,13 +23,22 @@ const Products = () => {
             title: 'Image',
             dataIndex: 'imageUrl',
             key: 'image',
-            render: (text, i) => <img height={40} src={text} alt={i.title}></img>,
+            render: (text, record) => (
+                <Link to={`/details/${record.id}`}>
+                    <img height={40} src={text} alt={record.title} />
+                </Link>
+            ),
         },
         {
+            
             title: 'Title',
             dataIndex: 'title',
             key: 'title',
-            render: (text) => <a>{text}</a>,
+            render: (text, record) => (
+                <Link to={`/details/${record.id}`}>
+                    <a>{text}</a>
+                </Link>
+                ),
         },
         {
             title: 'Price',
@@ -60,6 +69,10 @@ const Products = () => {
                     <Link to={`/details/${record.id}`}>
                         <Button color="primary" icon={<InfoCircleOutlined />} />
                     </Link>
+                    <Link to={`/edit/${record.id}`}>
+                        <Button color="primary" icon={<EditFilled />} />
+                    </Link>
+
 
                     <Popconfirm
                         title="Delete the product"

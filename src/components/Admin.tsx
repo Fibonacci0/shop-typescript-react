@@ -59,15 +59,15 @@ const AdminPage: React.FC = () => {
 
         {/* Users */}
         <Col span={8}>
-          <Link to="/admin/users">
+          <Link to="/register">
             <Card className="admin-card" hoverable>
               <UserOutlined className="admin-icon" />
-              <Title level={3}>Users</Title>
-              <Text>Manage customer accounts and permissions</Text>
+              <Title level={3}>Register</Title>
+              <Text>Register a new account</Text>
 
               <p>
                 <Button type="primary" className="admin-button">
-                  Go to Users
+                  Go to Registration
                 </Button>
               </p>
             </Card>

@@ -6,6 +6,9 @@ import {
     MenuUnfoldOutlined,
     ProductFilled,
     CloseCircleFilled,
+    PlusCircleFilled,
+    LoginOutlined,
+    LogoutOutlined,
 } from '@ant-design/icons';
 import { Button, Layout, Menu, theme } from 'antd';
 import { Link, Outlet } from 'react-router-dom';
@@ -41,6 +44,22 @@ const AppLayout: React.FC = () => {
                             key: '3',
                             icon: <InfoCircleFilled />,
                             label: <Link to="/info">About</Link>,
+                        },
+                        {
+                            key: '/create',
+                            icon: <PlusCircleFilled />,
+                            label: <Link to="/create">Create Product</Link>,
+                        },
+
+                        {
+                            key: '/login',
+                            icon: <LoginOutlined />,
+                            label: <Link to="/login">Login</Link>,
+                        },
+                        {
+                            key: '/register',
+                            icon: <LogoutOutlined />,
+                            label: <Link to="/register">Register</Link>,
                         },
                         {
                             key: '4',
