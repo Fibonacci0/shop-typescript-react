@@ -2,7 +2,6 @@ import React from "react";
 import { Card, Col, Row, Button, Typography, Statistic } from "antd";
 import {
   ShoppingCartOutlined,
-  InfoCircleOutlined,
   UserOutlined,
   DashboardOutlined,
   BarChartOutlined,
